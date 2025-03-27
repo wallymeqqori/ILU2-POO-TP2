@@ -52,11 +52,11 @@ public class BoundaryEmmenager {
 		int effetPotionMax = 1;
 		do {
 			question.append("Quelle est la force de potion la plus faible que vous produisiez ?");
-			int effetPotionMin = Clavier.entrerEntier(question.toString());
+			effetPotionMin = (Clavier.entrerEntier(question.toString()));
 			question.append("Quelle est la force de potion la plus forte que vous produisiez ?");
-			int effetPotionMax = Clavier.entrerEntier(question.toString());
-		} while ( effetPotionMin < effetPotionMax );
+			effetPotionMax = Clavier.entrerEntier(question.toString());
+		} while ( effetPotionMax < effetPotionMin );
 		
-		controllerEmmenager.ajouterDruide(nomVisiteur, forceDruide, effetPotionMin, effetPotionMax);
+		controlEmmenager.ajouterDruide(nomVisiteur, forceDruide, effetPotionMin, effetPotionMax);
 	}
 }
