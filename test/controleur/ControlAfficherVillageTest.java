@@ -57,4 +57,5 @@ class ControlAfficherVillageTest {
 		village.installerVendeur(abraracourcix, "fleur", 5);
 		assertTrue(controlAfficherVillage.donnerNbEtals() == 5);
 	}
+	
 }
